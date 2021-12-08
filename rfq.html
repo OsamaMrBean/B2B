@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rfqstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class = "logo">
+                <a href="main.html"><img src="img/logo.png" alt="website logo" width="50px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="rfq.html">RFQ Page</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </nav>
+            <img src="img/menu.png" class="menu-icon" onclick="menutogle()">
+        </div>
+        
+    </div>
+    <div class="space-medium">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="feature-description">
+                        <h2>We’re ready to listen to your needs & our verified suppliers will get back to you as fast as possible</h2>
+                        <hr>
+                        <!-- feature-left -->
+                        <div class="feature-left">
+                            <div class="feature-icon"><i class="far fa-address-book"></i></div>
+                            <div class="feature-content">
+                                <p>Our algorithm matches you to the right suppliers depending on your needs.</p>
+                            </div>
+                        </div>
+                        <!-- /.feature-left -->
+                        <!-- feature-left -->
+                        <div class="feature-left">
+                            <div class="feature-icon"><i class="far fa-compass"></i></div>
+                            <div class="feature-content">
+                                <p>Get multiple quotations from all over the country.</p>
+                            </div>
+                        </div>
+                        <!-- /.feature-left -->
+                        <!-- feature-left -->
+                        <div class="feature-left">
+                            <div class="feature-icon"><i class="far fa-question-circle"></i></div>
+                            <div class="feature-content">
+                                <p>Feel free to contact us for more details</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- /.feature-sections -->
+                <div class="offset-xl-1 col-xl-6 offset-lg-1 col-lg-10 offset-md-1 col-md-10 col-sm-12 col-12 mt30">
+                    <form>
+                        <!-- service-form -->
+                        <div class="service-form">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb10 ">
+                                    <h3>Get Affordable & Best SEO Services</h3>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                                    <div class="form-group service-form-group">
+                                        <label class="control-label sr-only" for="name"></label>
+                                        <input id="firstnamebox" type="text" placeholder="First Name" class="form-control" required>
+                                        <div class="form-icon"><i class="fa fa-user"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  ">
+                                    <div class="form-group service-form-group">
+                                        <label class="control-label sr-only" for="name"></label>
+                                        <input id="lastnamebox" type="text" placeholder="Last Name" class="form-control" required>
+                                        <div class="form-icon"><i class="fa fa-user"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                    <div class="form-group service-form-group">
+                                        <label class="control-label sr-only" for="email"></label>
+                                        <input id="emailbox" type="email" placeholder="Email" class="form-control" required>
+                                        <div class="form-icon"><i class="fa fa-envelope"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                    <div class="form-group service-form-group">
+                                        <label class="control-label sr-only" for="phone"></label>
+                                        <input id="phonebox" type="number" placeholder="Phone" class="form-control" required>
+                                        <div class="form-icon"><i class="fa fa-phone"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                    <div class="form-group service-form-group">
+                                        <label class="control-label sr-only" for="text"></label>
+                                        <input id="productnamebox" type="text" placeholder="Product name" class="form-control" required>
+                                        <div class="form-icon"><i class="fa fa-shopping-cart"></i></div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label class="control-label sr-only" for="select"></label>
+                                        <div class="select">
+                                            <input id="budgetbox" type="text" placeholder="Budget" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                    <div class="form-group">
+                                        <label class="control-label sr-only" for="textarea"></label>
+                                        <textarea class="form-control" id="descriptionbox" name="textarea" rows="3" placeholder="Description"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                    <button type="button" name="singlebutton" class="btn btn-default btn-block mb10 " id="sbtn">Submit Form</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /.service-form -->
+                </div>
+                
+    
+            </div>
+        </div>
+    </div><script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+     <!-------footer------->
+     <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download for Android and IOS mobile phone</p>
+                    <div class="app-logo">
+                        <img src="img/play-store.png">
+                        <img src="img/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <p>Our purpose is to serve</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>    
+
+    <!-----------------JS----------------------->
+    <script>
+        //declare variable MenuItems which take ul having id "MenuItems"
+        
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";//by default, we have set menu or dropdown menu height to 0px, means it is close by default
+        
+        function menutoggle()//this is the function which we have called above in nav which works on small devices and users click on it
+        {
+            if (MenuItems.style.maxHeight =="0px")//when user click on it and if it is closed or its height is 0px, then it will open or it should have heigt of 200px upon clicking
+            {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else//if user not clicked or it has already opened, then it will upon clicking again closed
+            {
+                MenuItems.style.maxHeight = "0px" 
+            }
+        
+        }
+    </script>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBxGIOr0xqKSVkVZw_VLcsaQJwE4Ei7x0I",
+          authDomain: "rfq99-9c1d5.firebaseapp.com",
+          projectId: "rfq99-9c1d5",
+          storageBucket: "rfq99-9c1d5.appspot.com",
+          messagingSenderId: "321367748997",
+          appId: "1:321367748997:web:5384768cf214789885d4ec"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        import { getDatabase,set,ref,child,update} from "https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js";
+        const db= getDatabase();
+        var firstnamebox = document.getElementById("firstnamebox");
+        var lastnamebox = document.getElementById("lastnamebox");
+        var emailbox=document.getElementById("emailbox");
+        var phonebox=document.getElementById("phonebox");
+        var productnamebox=document.getElementById("productnamebox");
+        var budgetbox=document.getElementById("budgetbox");
+        var descriptionbox=document.getElementById("descriptionbox");
+        var sbtn=document.getElementById("sbtn");
+        function InsertData() {
+            set(ref(db,"RFQ/"+firstnamebox.value),{
+                FirstName:firstnamebox.value,
+                LastName:lastnamebox.value,
+                Email:emailbox.value,
+                Phone:phonebox.value,
+                ProductName:productnamebox.value,
+                Budget:budgetbox.value,
+                Description:descriptionbox.value
+            })
+            Swal.fire({
+            type:'success',
+            title:'Success',
+            text: 'Form Submitted Successfully',
+            });
+    }
+    sbtn.addEventListener('click',InsertData);
+      </script> 
+    
+</body>

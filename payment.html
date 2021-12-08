@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout Page </title>
+      <link rel="stylesheet" href="paystyle.css">
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <form>
+            <h1>
+                <i class="fas fa-shipping-fast"></i>
+                Shipping Details
+            </h1>
+            <div class="name">
+                <div>
+                    <label>First Name</label>
+                    <input type="text" id="firstnamebox">
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" id="lastnamebox">
+                </div>
+            </div>
+            <div class="street">
+                <label>Street</label>
+                <input type="text" id="streetbox">
+            </div>
+            <div class="address-info">
+                <div>
+                    <label>City</label>
+                    <input type="text" id="citybox">
+                </div>
+                <div>
+                    <label>State</label>
+                    <input type="text" id="statebox">
+                </div>
+                <div>
+                    <label>Zip</label>
+                    <input type="text" id="zipbox">
+                </div>
+            </div>
+            <h1>
+                <i class="far fa-credit-card"></i> Payment Information
+            </h1>
+            <div class="cc-num">
+                <label for="card-num">Credit Card No.</label>
+                <input type="text" name="card-num">
+            </div>
+            <div class="cc-info">
+                <div>
+                    <label for="card-num">Expiry Date</label>
+                    <input type="text" name="expire">
+                </div>
+                <div>
+                    <label for="card-num">CVV</label>
+                    <input type="text" name="security">
+                </div>
+            </div>
+            <div class="btns">
+                <button type="button" id="pbtn">Purchase</button>
+                <button type="button"><a href = "products.html">Back To Cart</a></button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
+
+<!-- partial -->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+    import { getDatabase,set,ref,child,update} from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+    apiKey: "AIzaSyCKYXlkiNMEY6YnlFWQp0vIOQwmQAPoCWQ",
+    authDomain: "payment-f593e.firebaseapp.com",
+    projectId: "payment-f593e",
+    storageBucket: "payment-f593e.appspot.com",
+    messagingSenderId: "228285134014",
+    appId: "1:228285134014:web:6b041903cd18bad3645aef"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db= getDatabase();
+
+    var firstnamebox = document.getElementById("firstnamebox");
+    var lastnamebox = document.getElementById("lastnamebox");
+    var streetbox = document.getElementById("streetbox");
+    var citybox = document.getElementById("citybox");
+    var statebox = document.getElementById("statebox");
+    var zipbox = document.getElementById("zipbox");
+
+    var ptn = document.getElementById("pbtn");
+
+    var prtot = sessionStorage.getItem("ptot");
+
+    function InsertData() {
+        set(ref(db, "Payment/"+firstnamebox.value),{
+            FullName : firstnamebox.value + " " + lastnamebox.value,
+            Street : streetbox.value,
+            City : citybox.value,
+            State : statebox.value,
+            ZIPcode : zipbox.value
+        })
+        Swal.fire({
+          type:'success',
+          title:'Success',
+          text: prtot + '$ Paid Successfully',
+        });
+    }
+
+    ptn.addEventListener('click',InsertData);
+    
+</script>
+
+</body>
+</html>
